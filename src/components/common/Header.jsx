@@ -13,7 +13,8 @@ import { FiPhoneCall } from "react-icons/fi";
 import { CiMenuFries } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
 import { IoWalletOutline } from "react-icons/io5";
-
+import logo from "../../assets/header.png";
+ 
 
 const Header = () => {
 
@@ -72,27 +73,27 @@ const Header = () => {
                 <div className='details'>
                     <Link to="/" className='contact-detail'>
                         <FiMail className='icon'/>
-                        <p className='detail'>medicall489@gmail.com</p>
+                        <p className='detail'>telmedsphere489@gmail.com</p>
                     </Link>
                     <Link to="/" className='contact-detail'>
                         <FiPhoneCall className='icon'/>
-                        <p className='detail'>+91 00000 12345</p>
+                        <p className='detail'>+91 12345 67890</p>
                     </Link>
                 </div>
                 <div>
                     <Link to="/doctors" className='appt-link'>Appointment</Link>
                 </div>
             </div>}
+
             <header id="header" className={isSticky ? 'sticky' : ''}>
                 <div className="container">
                     <div className="navbar">
                         <h2 className="nav_logo">
-                            <Link to="/">Medicall</Link>
+                            <Link to="/"><img src={logo} alt="" /></Link>
                         </h2>
 
                         {
                             (localStorage.getItem("username")!==null && localStorage.getItem("username")!==undefined)? 
-
                                 windowWidth >= 800 ? (
                                     <nav className="nav_actions">
 
@@ -251,12 +252,12 @@ const Header = () => {
                          : (
                                 <div>
                                     <button type="button" onClick={toggleForm} className='get_started_btn'>
-                                        Get Started
+                                        Login
                                     </button>
                                 </div>
                             )
                         }
-
+ 
                     </div>
                 </div>
             </header>

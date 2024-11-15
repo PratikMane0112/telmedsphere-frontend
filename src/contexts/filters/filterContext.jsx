@@ -2,7 +2,7 @@ import React from "react";
 import { createContext, useEffect, useReducer } from 'react';
 import filtersReducer from './filterReducer';
 import medicinesData from '../../data/medicinesData';
-
+ 
 // Filters-Context
 const filtersContext = createContext();
 

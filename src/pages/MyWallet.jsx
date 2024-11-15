@@ -29,7 +29,7 @@ const MyWallet = () => {
 
     useScrollDisable(isLoading);
 
-    useEffect(() => {
+    useEffect(() => { 
         httpClient.post("/get_wallet", {email: localStorage.getItem("email")})
         .then((res) => {
             setAvailableMoney(Number((res.data.wallet).toFixed(2)));
@@ -92,7 +92,7 @@ const MyWallet = () => {
             setTimeout(() => {
                 setRechargeText("Successfully Recharged");
             }, 2000);
-            //end
+            //end 
 
         }, 2000);
     };

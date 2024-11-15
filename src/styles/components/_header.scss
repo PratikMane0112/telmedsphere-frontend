@@ -8,7 +8,7 @@
     
     @include devices(950px) {
         padding: 1rem 2rem;
-    }
+    } 
     
     @include devices(xs) {
         padding: 1rem;
@@ -70,8 +70,10 @@
     top: 0;
     left: 0;
     z-index: 999;
+    background-color: #d4ddf1;
     width: 100%;
     color: var(--blue-color-8);
+    padding: 1.5rem 2rem; /* Adjusted padding for better spacing */
     // background-color: var(--white-color);
     @include padding-y(1.5rem, 1.5rem);
     @include transition(background-color, 0.2s, linear);
@@ -84,14 +86,26 @@
 
 .navbar {
     @include flexbox(space-between, center);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; /* Adjusted gap for better spacing */
 }
 
 .nav_logo {
-
+    display: flex;
+    align-items: center;
+    img {
+        max-height: 45px; /* Adjust this value as needed */
+        height: auto;
+        width: auto;
+    }
+    
     &:hover {
         color: var(--blue-color-9);
     }
 }
+
 
 .get_started_btn {
     padding: 0.8rem 1rem;

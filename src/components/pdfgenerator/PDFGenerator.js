@@ -1,7 +1,7 @@
 import { jsPDF } from "jspdf";
 import 'jspdf-autotable';
-import { imageData } from "../../data/logoDataURL";
-import { signImageData } from "../../data/signDataURL";
+import { imageData } from "../../data/logoDataURL.js";
+import { signImageData } from "../../data/signDataURL.js";
 
 const PDFGenerator = ({name, age, gender, selectedDoc}, prescription) => {
     const pdf = new jsPDF("p", "pt", "a4");
@@ -13,17 +13,17 @@ const PDFGenerator = ({name, age, gender, selectedDoc}, prescription) => {
     pdf.setFontSize(25);
     pdf.setTextColor(74, 76, 178);
     
-    pdf.text("MEDICALL", (pdf.internal.pageSize.width - 40 - (pdf.getStringUnitWidth("MEDICALL") * pdf.internal.getFontSize())), y);
+    pdf.text("TELMEDSPHERE", (pdf.internal.pageSize.width - 40 - (pdf.getStringUnitWidth("TELMEDSPHERE") * pdf.internal.getFontSize())), y);
     y += 30;
     pdf.setFont("Helvetica", "normal");
     pdf.setFontSize(15);
     pdf.setTextColor(0, 0, 0);
     
-    pdf.text("Mumbai, India", (pdf.internal.pageSize.width - 40 - (pdf.getStringUnitWidth("Mumbai, India") * pdf.internal.getFontSize())), y);
+    pdf.text("Pune, India", (pdf.internal.pageSize.width - 40 - (pdf.getStringUnitWidth("Mumbai, India") * pdf.internal.getFontSize())), y);
     y += 20;
     pdf.text("+91 12345 67890", (pdf.internal.pageSize.width - 40 - (pdf.getStringUnitWidth("+91 12345 67890") * pdf.internal.getFontSize())), y);
     y += 20;
-    pdf.text("medicall@gmail.com", (pdf.internal.pageSize.width - 40 - (pdf.getStringUnitWidth("medicall@gmail.com") * pdf.internal.getFontSize())), y);
+    pdf.text("telmedsphere@gmail.com", (pdf.internal.pageSize.width - 40 - (pdf.getStringUnitWidth("telmedsphere@gmail.com") * pdf.internal.getFontSize())), y);
     y += 25;
     
     pdf.setFillColor(74, 76, 178);
@@ -138,7 +138,7 @@ const PDFGenerator = ({name, age, gender, selectedDoc}, prescription) => {
     pdf.setFont("Helvetica", "normal");
     pdf.setFontSize(12);
     pdf.setTextColor(150);
-    pdf.text("2024 @Medicall | All Rights Reserved", pdf.internal.pageSize.width - 40 - pdf.getStringUnitWidth("2024 @MediCall | All Rights Reserved") * pdf.internal.getFontSize(), pdf.internal.pageSize.height - 30);
+    pdf.text("2024 @TelMedSphere | All Rights Reserved", pdf.internal.pageSize.width - 40 - pdf.getStringUnitWidth("2024 @TelMedSphere | All Rights Reserved") * pdf.internal.getFontSize(), pdf.internal.pageSize.height - 30);
 
     return pdf;
 }

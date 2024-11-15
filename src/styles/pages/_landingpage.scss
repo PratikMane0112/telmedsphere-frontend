@@ -10,7 +10,7 @@
 
 #landing-page {
     position: relative;
-    
+
 
     .intro-section {
 
@@ -52,24 +52,18 @@
                 flex-direction: column-reverse;
             }
 
-            @include devices(sm) {
-                
-            }
-
             @include devices(xxs) {
                 top: 3rem;
             }
-            
+
             .text {
                 max-width: 50%;
-                padding: 1rem;
-                padding-top: 5rem;
-                
+
                 @include devices(md) {
                     padding-top: 2rem;
                     max-width: 90%;
                 }
-                
+
                 button {
                     margin-top: 2rem;
                     padding: 0.8rem 1rem;
@@ -77,7 +71,7 @@
                     color: var(--white-color);
                     background-color: var(--blue-color-9);
                     @include transition(all, 0.3s, ease);
-                    
+
                     &:hover {
                         background-color: var(--blue-color-8);
                         box-shadow: 0 1px 2px 0 black;
@@ -95,37 +89,55 @@
 
                 @include devices(md) {
                     max-width: 100%;
-                    
+
                     img {
                         max-width: 80%;
                     }
                 }
 
                 @include devices(md) {
-                    
                     img {
                         max-width: 90%;
                     }
                 }
-
             }
 
-            h2 {
+            .highlight-heading {
                 font-size: 2.5em;
                 margin-bottom: 1rem;
-                color: var(--blue-color-9);
+                background: linear-gradient(90deg, var(--blue-color-9), var(--primary-color));
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                // animation: fadeOut 2s ease-in-out, pulse 2s infinite;
+
                 @include devices(md) {
-                    font-size: 1.7em;
+                    font-size: 1.7em;   
                 }
             }
-            
-            p {
+
+            .highlight-text {
                 font-size: 1.2em;
+                margin-top: 1.4em;
+                animation: fadeIn 2s ease-in-out;
+                gap: 2em;
                 @include devices(md) {
                     font-size: 1em;
                 }
             }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
         }
+
     }
 
 
@@ -145,16 +157,16 @@
             @include devices(md) {
                 flex-direction: column;
             }
-            
+
             .img-div {
                 flex: 0 0 40%;
                 width: 100%;
                 padding: 1rem;
                 text-align: center;
-                
+
                 img {
                     width: 90%;
-                    
+
                     @include devices(md) {
                         width: min(90%, 400px);
                     }
@@ -163,13 +175,13 @@
                 @include devices(md) {
                     margin-bottom: 2rem;
                 }
-                
+
             }
-            
+
             .content {
                 flex: 0 0 55%;
                 padding: 1rem;
-                
+
                 @include devices(md) {
                     padding: 2rem;
                 }
@@ -178,111 +190,122 @@
                     color: var(--blue-color-9);
                     margin-bottom: 2rem;
                 }
-    
+
                 ul {
                     li {
                         margin: 1rem auto;
                         color: var(--blue-color-8);
                     }
                 }
-    
-    
-    
+
+
+
             }
 
         }
     }
 
-    .features-section {
-        padding: 5rem 0;
+    .services-section {
+        padding: 4rem 0;
         text-align: center;
         background-color: white;
 
-        h2 {
-            color: var(--blue-color-8);
+        .header {
+            h2 {
+                color: #333;
+                margin-bottom: 2rem;
+            }
         }
 
-        .features {
+        .service-list {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
-            margin-top: 3rem;
-            max-width: 1000px;
-            justify-content: center;
-            
-            .item {
-                @include flexbox(flex-start, center);
+
+            .service-item {
+                display: flex;
                 flex-direction: column;
-                flex: 0 0 32%;
-                min-width: 300px;
-                max-width: 300px;
+                align-items: center;
+                flex: 0 1 30%;
+                min-width: 280px;
+                max-width: 280px;
                 text-align: center;
-                padding: 30px 30px 25px;
-                border-radius: 7px;
-                transition: all 0.3s ease;
-                border: 1px solid #eaeaea;
-                background-color: #fff;
+                padding: 25px;
+                border-radius: 10px;
+                transition: transform 0.3s, box-shadow 0.3s;
+                border: 1px solid #dcdcdc;
+                background-color: whitesmoke;
                 margin: 1rem;
 
                 &:hover {
-                    box-shadow: 0 0 10px 10px var(--white-color);
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 }
 
+                .icon-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 80px;
+                    max-height: 80px;
 
-                .img-div {
-                    min-height: 100px;
-                    max-height: 100px;
+                    .icon {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.8em;
 
-                    .img {
-                        width: 60px;
-                        height: 60px;
-                        border-radius: 100%;
-                        margin: auto;
-                        @include flexbox(center, center);
-                        font-size: 2em;
-
-                        &.first {
-                            background-color: rgba(12, 184, 182, 0.1);
-                            color: #0cb8b6;
-                            border: 2px solid #0cb8b6;
+                        &.icon-1 {
+                            background-color: rgba(25, 150, 143, 0.1);
+                            color: #19958f;
+                            border: 2px solid #19958f;
                         }
 
-                        &.second {
-                            background-color: rgba(246, 171, 47, 0.1);
-                            color: #f6ab2f;
-                            border: 2px solid #f6ab2f;
+                        &.icon-2 {
+                            background-color: rgba(245, 158, 50, 0.1);
+                            color: #f59c23;
+                            border: 2px solid #f59c23;
                         }
 
-                        &.third {
-                            background-color: rgba(230, 73, 45, 0.1);
-                            color: #e6492d;
-                            border: 2px solid #e6492d;
+                        &.icon-3 {
+                            background-color: rgba(240, 80, 50, 0.1);
+                            color: #f05032;
+                            border: 2px solid #f05032;
                         }
                     }
                 }
+
                 h3 {
-                    color: var(--blue-color-9);
-                    margin-bottom: 1rem;
-                    min-height: 50px;
-                    max-height: 50px;
+                    color: #222;
+                    margin-bottom: 0.75rem;
+                    font-size: 1.25em;
                 }
+
                 p {
-                    color: var(--blue-color-6);
+                    color: #555;
+                    font-size: 0.9em;
                 }
             }
         }
     }
+
 
 
     .benefits-section {
         padding: 3rem 0;
         background-color: white;
-        
+
         .content {
             text-align: center;
             color: var(--blue-color-9);
         }
-        
+
         .benefits {
             display: flex;
             flex-wrap: wrap;
@@ -293,7 +316,10 @@
             color: var(--blue-color-7);
         }
 
-        .first, .second, .third, .fourth {
+        .first,
+        .second,
+        .third,
+        .fourth {
             @include flexbox(space-between, center);
             flex: 0 0 20%;
             min-width: 210px;
@@ -309,50 +335,59 @@
                 font-size: 1.5em;
                 flex: 0 0 20%;
             }
+
             p {
                 flex: 0 0 70%;
             }
         }
-        
+
         .first {
             background-color: rgba(246, 171, 47, 0.1);
             transition: all 0.3s ease-in-out;
+
             .icon {
                 color: #f6ab2f;
             }
+
             &:hover {
                 box-shadow: 0 0 4px 0px #f6ab2f;
             }
         }
-        
+
         .second {
             background-color: rgba(12, 184, 182, 0.1);
             transition: all 0.3s ease-in-out;
+
             .icon {
                 color: #0cb8b6;
             }
+
             &:hover {
                 box-shadow: 0 0 4px 0px #0cb8b6;
             }
         }
-        
+
         .third {
             background-color: rgba(230, 73, 45, 0.1);
             transition: all 0.3s ease-in-out;
+
             .icon {
                 color: #e6492d;
             }
+
             &:hover {
                 box-shadow: 0 0 4px 0px #e6492d;
             }
         }
-        
+
         .fourth {
             background-color: rgba(22, 101, 216, 0.1);
             transition: all 0.3s ease-in-out;
+
             .icon {
                 color: #1665d8;
             }
+
             &:hover {
                 box-shadow: 0 0 4px 0px #1665d8;
             }
@@ -373,7 +408,7 @@
                     margin-bottom: 2rem;
                 }
             }
-    
+
             .team {
                 display: flex;
                 flex-wrap: wrap;
@@ -381,7 +416,7 @@
                 max-width: 1200px;
                 justify-content: center;
                 margin-top: 2rem;
-    
+
                 .item {
 
                     @include flexbox(center, center);
@@ -400,13 +435,13 @@
 
                     &:hover {
                         box-shadow: 0 0 10px 10px var(--white-color);
-                        
+
                         .contact-div {
                             @include toggleVisibility(visible, 1);
                             font-size: 30px;
                         }
                     }
-    
+
 
                     .img-div {
 
@@ -414,15 +449,16 @@
                             width: 250px;
                             height: 250px;
                             border-bottom: 1px solid #eaeaea;
-    
+
                         }
                     }
+
                     h3 {
                         color: var(--blue-color-6);
                         margin-top: 1rem;
                         margin-bottom: 0.7rem;
                         cursor: pointer;
-                        
+
                         &:hover {
                             color: var(--blue-color-9);
                         }
@@ -431,7 +467,7 @@
                     p {
                         color: var(--grey-color-3);
                     }
-    
+
                     .contact-div {
                         position: absolute;
                         bottom: 85px;
@@ -443,14 +479,14 @@
                         width: 250px;
                         height: 70px;
                         border-radius: 100% 100% 0 0;
-                        
+
                         .contact-icon {
                             color: var(--white-color);
                             padding: 0px 5px 5px 5px;
                             margin: 7px;
                             cursor: pointer;
                             transition: all 0.1s linear;
-    
+
                             &:hover {
                                 color: #fff;
                             }
@@ -493,10 +529,10 @@
                 width: 100%;
                 padding: 1rem;
                 text-align: center;
-                
+
                 img {
                     width: 90%;
-                    
+
                     @include devices(md) {
                         width: min(90%, 400px);
                     }
@@ -505,13 +541,13 @@
                 @include devices(md) {
                     margin-bottom: 2rem;
                 }
-                
+
             }
 
             .content {
                 flex: 0 0 55%;
                 padding: 1rem;
-                
+
                 @include devices(md) {
                     padding: 2rem;
                 }
@@ -536,7 +572,7 @@
                         .item-qn {
                             text-align: left;
                         }
-                        
+
                         .item-ans {
                             width: 100%;
                             padding: 1rem;

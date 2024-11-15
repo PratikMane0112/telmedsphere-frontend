@@ -191,7 +191,7 @@ const MedicineDetails = () => {
                                               navigate("/checkout");
                                             }, 2000);
                                           }
-                                    }}
+                                    }} 
                                 >
                                     Buy now
                                 </button>

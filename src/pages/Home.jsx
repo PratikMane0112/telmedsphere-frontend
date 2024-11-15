@@ -40,7 +40,7 @@ const Home = () => {
     const [alertmessage, setAlertmessage] = useState("");
     const [available, setAvailable] = useState(localStorage.getItem("available")===undefined || localStorage.getItem("available")===null || localStorage.getItem("available")==="true");
     const [isVerified, setVerified] = useState(localStorage.getItem("verified")!==undefined && localStorage.getItem("verified")!==null && localStorage.getItem("verified")==="true");
-    const [verCont, setVerCont] = useState("Your Account is not verified yet! Please wait until you're verified!!");
+    const [verCont, setVerCont] = useState("Your Account is not verified yet! Please verify for appointments!!");
     const [verAlert, setVerAlert] = useState(false);
 
 
@@ -71,7 +71,7 @@ const Home = () => {
         }
 
         if(!userNotExists) {
-            if (!isDoctor) {
+            if (!isDoctor) { 
             toggleLoading(true);
             httpClient.post('/patient_apo', { email: localStorage.getItem('email') })
                 .then((res) => {
@@ -258,10 +258,10 @@ const Home = () => {
                     localStorage.setItem("verified", true);
                 }
                 else {
-                    setVerCont("Oops! Your Account isn't verfied yet!!");
+                    setVerCont("Oops! Your Account isn't verified yet!!");
                     setVerAlert(false);
                     setTimeout(() => {
-                        setVerCont("Your Account is not verified yet! Please wait until you're verified!!");
+                        setVerCont("Your Account is not verified yet! Please verify for appointments!!");
                         setVerified(false);
                     }, 2000);
                     localStorage.setItem("verified", false);
@@ -285,7 +285,7 @@ const Home = () => {
         <>
             <div id="home-page">
                 {isDoctor && !isVerified && <Alert severity={verAlert ? "success" : "error"} style={{
-                    position: "fixed", top: "50px", width: "100%", display: "flex", justifyContent: "center"
+                    position: "fixed", top: "100px", width: "100%", display: "flex", justifyContent: "center"
                     }}>{verCont}</Alert>}
 
                 {isDoctor && !isVerified && (
@@ -315,7 +315,7 @@ const Home = () => {
                     </div>
                 )}
 
-                { !isDoctor && (
+                {/* { !isDoctor && (
                     <div className="dis-pred-test-div">
                         <div className="test-bg"></div>
                         <div className="main">
@@ -330,7 +330,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                )}
+                )} */}
 
 
                 <div className="upcoming-appointments">
@@ -577,7 +577,7 @@ const Home = () => {
                     </div>
                     <div className="available-details">
                         <div className="note" onClick={()=>iamavailable()}>Yes, I am available!</div>
-                        <div className="note"onClick={()=>iamnotavailable()}>No, I am not available!</div>
+                        <div className="note" onClick={()=>iamnotavailable()}>No, I am not available!</div>
                     </div>
                 </div>
 

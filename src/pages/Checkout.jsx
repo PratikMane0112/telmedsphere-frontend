@@ -29,8 +29,9 @@ export default function Checkout() {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       }
-    })
+    }) 
       .then((res) => {
+        console.log(res.data.clientSecret);
         setClientSecret(res.data.clientSecret);
         toggleLoading(false);
       })

@@ -4,7 +4,7 @@ import useOutsideClose from '../../hooks/useOutsideClose';
 import useScrollDisable from '../../hooks/useScrollDisable';
 import { Alert, CircularProgress } from "@mui/material";
 import httpClient from '../../httpClient';
-
+ 
 const AccountForm = () => {
 
     const { isFormOpen, toggleForm, setFormUserInfo } = useContext(commonContext);
@@ -139,8 +139,8 @@ const AccountForm = () => {
         
         }, 1500);
 
-    }
-
+    } 
+ 
 
     return (
         <>
@@ -155,7 +155,7 @@ const AccountForm = () => {
                                 <div className="form_head">
                                     <h2>{isSignupVisible ? 'Signup' : 'Login'}</h2>
                                     <p>
-                                        {isSignupVisible ? 'Already have an account ?' : 'New to Medicall ?'}
+                                        {isSignupVisible ? 'Already have an account ?' : 'New to TelMedSphere ?'}
                                         &nbsp;&nbsp;
                                         <button type="button" onClick={handleIsSignupVisible}>
                                             {isSignupVisible ? 'Login' : 'Create an account'}

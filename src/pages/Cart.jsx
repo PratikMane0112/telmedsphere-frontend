@@ -160,7 +160,7 @@ const Cart = () => {
                         // });
                         localStorage.setItem("orders", JSON.stringify(cartItems))
                         window.location.href = "https://gfg-sfi.onrender.com/success";
-                      }
+                      } 
                       else{
                         setIsCheckoutLoading(true);
                         httpClient.post('/debit_wallet', {email: localStorage.getItem("email"), walletAmount: balance})

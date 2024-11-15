@@ -55,9 +55,9 @@ const Doctors = () => {
     else {
       fetchDoctors();
     }
-    //eslint-disable-next-line
+    //eslint-disable-next-line 
   }, []);
-
+ 
   useEffect(() => {
     handletimings();
   }, [isScheduleMeet, curDate])
@@ -69,7 +69,7 @@ const Doctors = () => {
       setDoctors(res.data.details);
       // console.log(doctors)
       toggleLoading(false);
-      setFetchingData(false);
+      setFetchingData(false); 
     }).catch(() => {
       // console.log(res)
       toggleLoading(false);
@@ -317,7 +317,7 @@ const Doctors = () => {
         }}
       >
         <div id="meet-modal" style={{ width: "min(400px, 90vw)" }}>
-          <div className="close_btn_div">
+          <div className="close_btn_div"> 
             <IoMdClose onClick={() => {
               setMessage("")
               setMeetModal(false)

@@ -100,7 +100,7 @@ const handleSend = async (msg) => {
       ...messages,
       newMessage,
       {
-        message: "Hello!! Welcome to Medicall!!.",
+        message: "Hello!! Welcome to TelMedSpherel!!.",
         sender: "ChatGPT",
       },
     ]);

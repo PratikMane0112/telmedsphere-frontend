@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-
+ 
 const useDocTitle = (title) => {
     useEffect(() => {
         if (title) {
-            document.title = `${title} - Medicall`;
+            document.title = `${title} - TelMedSphere`;
         } else {
-            document.title = 'Medicall';
+            document.title = 'TelMedSphere';
         }
     }, [title]);
 

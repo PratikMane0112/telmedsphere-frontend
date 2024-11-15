@@ -19,13 +19,13 @@ import Chatbot from "../components/common/Chatbot";
 import MyOrders from "../pages/MyOrders";
 import MyWallet from "../pages/MyWallet";
 import RecentTransactions from "../pages/RecentTransactions";
-
+ 
 
 const RouterRoutes = () => {
   useScrollRestore();
 
   return (
-    <>
+    <> 
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
@@ -48,7 +48,7 @@ const RouterRoutes = () => {
         <Route path="/my-wallet" element={<MyWallet />} />
         <Route path="/recent-transactions" element={<RecentTransactions />} />
 
-        <Route path="/*" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );

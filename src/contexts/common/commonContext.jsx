@@ -10,9 +10,9 @@ const initialState = {
     isFormOpen: false,
     searchResults: [],
     isFeedbackOpen: false,
-    isProfileOpen: false,
+    isProfileOpen: false, 
     isLoading: false
-};
+}; 
 
 // Common-Provider Component
 const CommonProvider = ({ children }) => {
@@ -29,7 +29,7 @@ const CommonProvider = ({ children }) => {
 
     const toggleProfile = (toggle) => {
         return dispatch({
-            type: 'TOGGLE_PROFILE',
+            type: 'TOGGLE_PROFILE', 
             payload: { toggle }
         });
     };

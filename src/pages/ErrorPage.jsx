@@ -29,7 +29,7 @@ const ErrorPage = () => {
             </div>
             <h2>OOPS! PAGE NOT FOUND</h2>
             <div className="err-content">
-                Sorry, the page you're looking for doesn't exist. Let's get you back on track.
+                Sorry, the page you're looking for doesn't exist.
             </div>
             <div className="back-btn">
                 <button onClick={() => navigate("/")}>Back to Home</button>

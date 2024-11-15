@@ -82,7 +82,7 @@ const Success = () => {
       <div className="content">
         <h1>Payment Successful!!!</h1>
         <br></br>
-        <h3>Thank you for choosing MEDICALL!</h3>
+        <h3>Thank you for choosing TELMEDSPHERE!</h3>
       </div>
       <div className="redirecting-div" onClick={() => setActive(prev => !prev)}>
         <CircularProgress size={24} />

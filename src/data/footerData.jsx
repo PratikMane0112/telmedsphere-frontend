@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaGithub,FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
+import { FaPhoneAlt, FaHospital } from 'react-icons/fa';
 
 export const footMenu = [
     {
@@ -44,32 +46,21 @@ export const footMenu = [
 export const footSocial = [
     {
         id: 1,
-        icon: <FaGithub />,
-        cls: "Github",
+        icon: <IoMdMail />,
+        cls: "Mail",
         path: "/",
     },
     {
         id: 2,
-        icon: <FaFacebookF />,
-        cls: "facebook",
+        icon: <FaPhoneAlt />,
+        cls: "phone",
         path: "/",
     },
     {
         id: 3,
-        icon: <FaTwitter />,
-        cls: "twitter",
+        icon: <FaHospital />,
+        cls: "Hospital",
         path: "/",
     },
-    {
-        id: 4,
-        icon: <FaInstagram />,
-        cls: "instagram",
-        path: "/",
-    },
-    {
-        id: 5,
-        icon: <FaLinkedinIn />,
-        cls: "linkedin",
-        path: "/",
-    },
+   
 ];

@@ -22,7 +22,7 @@ const MeetPage = () => {
       //eslint-disable-next-line
   }, []);
 
-  const apiRef = useRef();
+  const apiRef = useRef(); 
   //eslint-disable-next-line
   const [logItems, updateLog] = useState([]);
   const [knockingParticipants, updateKnockingParticipants] = useState([]);
@@ -205,7 +205,7 @@ const MeetPage = () => {
       gender: searchparams.get("gender")? searchparams.get("gender")[0].toUpperCase() + searchparams.get("gender").slice(1).toLowerCase() : "NA",
       selectedDoc: searchparams.get("selectedDoc")? searchparams.get("selectedDoc") : "Doctor_Name"
     }, prescription);
-    pdf.save("Medicall-Invoice.pdf");
+    pdf.save("TelMedSphere-Invoice.pdf");
 
   }
 

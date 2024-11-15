@@ -6,7 +6,7 @@ const commonReducer = (state, action) => {
                 ...state,
                 isFormOpen: action.payload.toggle
             };
-
+            
         case 'TOGGLE_FEEDBACK':
             return {
                 ...state,

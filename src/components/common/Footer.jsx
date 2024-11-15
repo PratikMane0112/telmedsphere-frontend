@@ -2,19 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { footMenu, footSocial } from '../../data/footerData';
 import { TfiAngleRight } from "react-icons/tfi";
+import logo from "../../assets/header.png"
 
-const Footer = () => {
+const Footer = () => { 
 
     return (
         <footer id="footer">
             <div className="container">
                 <div className="wrapper footer_wrapper">
                     <div className="foot_about">
-                        <h2>
-                            <Link to="/">Medicall</Link>
-                        </h2>
                         <div className='foot_logo_div'>
-                            <img src='/logo512.png' alt='footer-logo' width="150px" height="150px" />
+                        <Link to="/"><img src={logo} alt='footer-logo' width="230px" height="230px" /></Link>
                         </div>
                     </div>
 
@@ -55,7 +53,7 @@ const Footer = () => {
                     <div className="sub_footer_wrapper">
                         <div className="foot_copyright">
                             <p>
-                                2024 @ <a href="/">Medicall</a> | All Rights Reserved.
+                                2024 @ <a href="/">TelMedSphere</a> | All Rights Reserved.
                             </p>
                         </div>
                         <div className="foot_social">

@@ -15,7 +15,7 @@ const Home = (props) => {
           <div className="usa-checkbox">
             <input checked={props.isChecked} onChange={props.checked} className="usa-checkbox__input" id="truth" type="checkbox" name="historical-figures-1" value="truth" />
             <label className="usa-checkbox__label" htmlFor="truth">
-              I agree to the Medicall terms and conditions
+              I agree to the TelMedSphere terms and conditions
             </label>
           </div>
         </form>

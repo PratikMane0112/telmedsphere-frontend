@@ -42,7 +42,7 @@ const ProductCard = (props) => {
                     <div className="separator"></div>
                     <h2 className="products_price">
                         ₹ {price} /- &nbsp;
-                    </h2>
+                    </h2> 
                     <button
                         type="button"
                         className="btn products_btn"
