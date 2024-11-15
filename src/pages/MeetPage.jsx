@@ -256,7 +256,7 @@ const MeetPage = () => {
               ]  
             }}
             onApiReady={(externalApi) => handleApiReady(externalApi)}
-            onReadyToClose={isDoctor ? handleDocEndMeeting : handleEndMeeting}
+            onReadyToClose={handleEndMeeting}
             getIFrameRef={handleJitsiIFrameRef1}
             interfaceConfigOverwrite = {{
                 DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
@@ -264,7 +264,7 @@ const MeetPage = () => {
                 SHOW_JITSI_WATERMARK: false
             }}
             userInfo = {{
-                displayName: isDoctor ? searchparams.get("selectedDoc") : searchparams.get("name")
+                displayName: searchparams.get("name")
             }}
             
         />
